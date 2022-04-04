@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#2364dd" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      @font-face {
+        font-family: linja-pona;
+        src: url("/linja-pona-4.9.otf") format("opentype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: block;
+      }
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 400;
+        src: url("/nunito-sans-400.woff2") format("woff2");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 700;
+        src: url("/nunito-sans-700.woff2") format("woff2");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 900;
+        src: url("/nunito-sans-900.woff2") format("woff2");
+        font-display: swap;
+      }
+    </style>
+    <script>
+      window.goatcounter = {
+        path: function (p) {
+          return location.host + p;
+        },
+      };
+      // Don't wait for the app and css the load to request essential fonts.
+      document.fonts.load("16px Nunito Sans");
+      if (localStorage.getItem("locale") === '"tok-x-sp"') {
+        document.fonts.load("29px linja-pona");
+      }
+    </script>
+    <meta http-equiv="content-security-policy" content=""><title>Wordy</title><link rel="apple-touch-icon" href="/apple-touch-icon-en.png" data-svelte="svelte-1fni385"><link rel="icon" sizes="192x192" href="/icon-en.png" data-svelte="svelte-1fni385"><meta name="twitter:card" content="summary_large_image" data-svelte="svelte-1fni385"><meta property="og:type" content="website" data-svelte="svelte-1fni385"><meta property="og:image" content="https://wordy.maciej.ie/share-en.png" data-svelte="svelte-1fni385"><meta property="og:url" content="https://wordy.maciej.ie" data-svelte="svelte-1fni385"><meta property="og:title" content="Wordy" data-svelte="svelte-1fni385"><meta property="og:description" content="Open Source Wordle" data-svelte="svelte-1fni385"><meta name="description" content="Open Source Wordle" data-svelte="svelte-1fni385">
+	<link rel="stylesheet" href="/_app/assets/pages/index.svelte-ec8bdb61.css">
+	<link rel="modulepreload" href="/_app/start-837f9603.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-2562231a.js">
+	<link rel="modulepreload" href="/_app/layout.svelte-d7ed14ff.js">
+	<link rel="modulepreload" href="/_app/pages/index.svelte-54374b62.js">
+  </head>
+  <body>
+    <script>
+      // Prevent flash of white.
+      const theme = localStorage.getItem("theme");
+      if (
+        theme === '"dark"' ||
+        (theme === '"auto"' &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.body.classList.add("dark");
+      }
+    </script>
+    <div id="svelte">
+
+
+
+
+<main class="svelte-c04lic" style="--app-width: 500px;"><heading class="svelte-7ehyn0"><div><h1>Wordy</h1>
+    <span class="tagline svelte-7ehyn0">Open Source Wordle
+      <button class="olukinala svelte-7ehyn0" tabindex="-1">Do Not Look</button></span></div>
+  <div class="buttons svelte-7ehyn0">
+    <button title="Settings" class="svelte-1vbna0v"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svelte-1vbna0v"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" class="svelte-1vbna0v"></path></svg>
+</button>
+    <button title="What is this?" class="svelte-1vbna0v"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svelte-1vbna0v"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z" class="svelte-1vbna0v"></path></svg>
+</button></div></heading>
+
+
+
+
+
+
+
+
+
+
+  
+
+<div class="wordle svelte-1rq6a77" style="--tile-size: 70px; grid: auto-flow 70px / repeat(5, 70px);">
+    <div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div>
+    <div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div>
+    <div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div>
+    <div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div>
+    <div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div>
+    <div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div><div class="unknown svelte-1p93gke"><span class="webkit-aa-fix svelte-1p93gke"> </span>
+</div></div>
+
+
+<div class="keyboard svelte-t0xzej" style="grid: auto-flow / repeat(20, 1fr);">
+<button class="unknown svelte-dnqbus" tabindex="-1">Q
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">W
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">E
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">R
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">T
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">Y
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">U
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">I
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">O
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">P
+  
+</button>
+  
+<button class="unknown svelte-dnqbus  offset" tabindex="-1">A
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">S
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">D
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">F
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">G
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">H
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">J
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">K
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">L
+  
+</button>
+  
+<button class="unknown svelte-dnqbus big" tabindex="-1">Enter
+</button>
+  
+<button class="unknown svelte-dnqbus" tabindex="-1">Z
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">X
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">C
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">V
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">B
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">N
+  
+</button>
+<button class="unknown svelte-dnqbus" tabindex="-1">M
+  
+</button>
+  
+<button class="unknown svelte-dnqbus big" tabindex="-1">Delete
+</button>
+</div>
+  <div class="container svelte-1qv0k4q">
+</div>
+  
+
+
+  <a href="http://wate.maciej.ie" tabindex="-1" class="lupamonsi svelte-157b1dd">
+    <svg viewBox="0 0 27 24" xmlns="http://www.w3.org/2000/svg" class="svelte-157b1dd"><path d="M18.5 0H18a11.8 11.8 0 0 0-5.9 2C8 4.5 6.4 9.2 6.3 13.9H5.1c-3.3
+        0-5.1 2.3-5.1 5.4C0 22 1.5 24 4.3 24h10l-1.6-5.6-1.5.4 1 3.6H8v-7.8c0-6.2
+        2.6-12 9.4-13L18 4l6 4.8-3.5 2.2v13H22V11.8l4.5-3L19.3 3l-.8-3zm-4.3 6a1.5
+        1.5 0 0 0-1.6 1.6c0 .8.7 1.5 1.6 1.5a1.5 1.5 0 0 0 1.5-1.5A1.5 1.5 0 0 0
+        14.2 6zm4.2 0a1.5 1.5 0 0 0-1.5 1.6c0 .8.6 1.5 1.5 1.5a1.5 1.5 0 0 0
+        1.5-1.5A1.5 1.5 0 0 0 18.4 6zM4.9 22.5v-7h1.4v7H5zm-3.3-3.1c0-1.4.4-2.7
+        1.7-3.4v6.4c-1.4-.5-1.7-1.7-1.7-3zM16.8 24h1.6v-6.6h-1.6V24z" class="svelte-157b1dd"></path></svg></a>
+</main>
+
+
+		<script type="module" data-hydrate="k2sh28">
+		import { start } from "/_app/start-837f9603.js";
+		start({
+			target: document.querySelector('[data-hydrate="k2sh28"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/layout.svelte-d7ed14ff.js"),
+						import("/_app/pages/index.svelte-54374b62.js")
+				],
+				params: {}
+			}
+		});
+	</script></div>
+    <script
+      data-goatcounter="https://stats.maciej.ie/count"
+      async
+      src="https://stats.maciej.ie/count.js"
+    ></script>
+  </body>
+</html>
